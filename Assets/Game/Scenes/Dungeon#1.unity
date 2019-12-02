@@ -649,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 2562232625729453189, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
         type: 3}
       propertyPath: m_Name
-      value: Character
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1573367224659594902, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
         type: 3}
@@ -706,6 +706,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5813880938849527169, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cc3af0c2ad527549a90ef27bdb0ab75, type: 3}
 --- !u!1001 &323435997
@@ -715,6 +720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301113076}
     m_Modifications:
+    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_Name
+      value: Plants Hanging 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012242988272, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3689098
@@ -758,10 +767,6 @@ PrefabInstance:
     - target: {fileID: 4000012242988272, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_Name
-      value: Plants Hanging 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
@@ -914,6 +919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301113076}
     m_Modifications:
+    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_Name
+      value: Plants Hanging 1 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012242988272, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2829094
@@ -958,10 +967,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_Name
-      value: Plants Hanging 1 (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
 --- !u!1 &444015352
@@ -975,6 +980,7 @@ GameObject:
   - component: {fileID: 444015355}
   - component: {fileID: 444015354}
   - component: {fileID: 444015353}
+  - component: {fileID: 444015357}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1000,7 +1006,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.07450981, g: 0.07450981, b: 0.07450981, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1014,8 +1020,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 75
-  field of view: 60
+  far clip plane: 50
+  field of view: 32
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1040,13 +1046,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444015352}
-  m_LocalRotation: {x: 0.31525218, y: 0.030914165, z: 0.02906049, w: 0.948059}
-  m_LocalPosition: {x: -3.24, y: 19.87, z: -28.45}
+  m_LocalRotation: {x: -0.27130568, y: -0.013170414, z: 0.0008127296, w: -0.9624028}
+  m_LocalPosition: {x: -5.5905676, y: 10.27187, z: -23.519226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 36.581, y: -2154.502, z: 5.33}
+  m_LocalEulerAnglesHint: {x: 31.482002, y: -2158.326, z: 0.37500003}
+--- !u!114 &444015357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444015352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4ca5052d8cebc44ba6e21becc7fc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1783879789}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 10.9, z: -16.59}
 --- !u!1001 &468131403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2495,6 +2516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301113076}
     m_Modifications:
+    - target: {fileID: 1000010238590464, guid: 783703c53b9cbc74f8fec9a8e1a8c997, type: 3}
+      propertyPath: m_Name
+      value: Plant 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011114845160, guid: 783703c53b9cbc74f8fec9a8e1a8c997, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3839102
@@ -2538,10 +2563,6 @@ PrefabInstance:
     - target: {fileID: 4000011114845160, guid: 783703c53b9cbc74f8fec9a8e1a8c997, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010238590464, guid: 783703c53b9cbc74f8fec9a8e1a8c997, type: 3}
-      propertyPath: m_Name
-      value: Plant 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783703c53b9cbc74f8fec9a8e1a8c997, type: 3}
@@ -2845,6 +2866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301113076}
     m_Modifications:
+    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+      propertyPath: m_Name
+      value: Plants Hanging 1 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012242988272, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3689098
@@ -2889,12 +2914,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010785602090, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
-      propertyPath: m_Name
-      value: Plants Hanging 1 (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d515a93a5b4c1d44f838a8669ec9c8d0, type: 3}
+--- !u!1 &1783879784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2562232625729453189, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
+    type: 3}
+  m_PrefabInstance: {fileID: 233786948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1783879785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783879784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee0c5adecb643a4ba7d4ff38013a525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1783879789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1573367224659594902, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
+    type: 3}
+  m_PrefabInstance: {fileID: 233786948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1790937933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012242988272, guid: d515a93a5b4c1d44f838a8669ec9c8d0,
