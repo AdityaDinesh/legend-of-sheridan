@@ -16,7 +16,7 @@ public class PlayerAnimControl : MonoBehaviour
     void Update()
     {
         // Skybox Rotator
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 0.4f);
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * -0.4f);
 
         // Get horizontal and vertical inputs
         x = Input.GetAxis("Horizontal");
