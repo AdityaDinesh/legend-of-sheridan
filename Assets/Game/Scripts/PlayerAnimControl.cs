@@ -15,6 +15,9 @@ public class PlayerAnimControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Skybox Rotator
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * -0.4f);
+
         // Get horizontal and vertical inputs
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
