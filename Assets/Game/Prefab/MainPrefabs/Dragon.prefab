@@ -89,7 +89,7 @@ BoxCollider:
   m_GameObject: {fileID: 2291956807514727697}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -244,6 +244,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 992715477302272819}
     m_Modifications:
+    - target: {fileID: 8271089894701478537, guid: c2f23575c98389b439b7e416a6379407,
+        type: 3}
+      propertyPath: fireBall
+      value: 
+      objectReference: {fileID: 4124114981833284164, guid: caaf254f9c40a12469d61207f38a01aa,
+        type: 3}
     - target: {fileID: 6487650855475140962, guid: c2f23575c98389b439b7e416a6379407,
         type: 3}
       propertyPath: m_Name

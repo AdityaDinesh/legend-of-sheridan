@@ -9,10 +9,15 @@ public class Dragon_Script : MonoBehaviour
     [SerializeField]
     int hitPoints = 2;
     Animator anim;
+    [SerializeField]
+    GameObject fireBall;
+    bool isAttack = false;
+    int fireBallCount = 0;
 
     private void Awake()
     {
         anim = this.gameObject.GetComponent<Animator>();
+        //fireBall = GameObject.Find("FireBall");
     }
     private void Start()
     {
@@ -21,18 +26,40 @@ public class Dragon_Script : MonoBehaviour
     void Update()
     {
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            Destroy(this.gameObject);
+            Attack(); 
         }
+        else
+        {
+            fireBallCount = 0;
+        }
+
+        
     }
 
     private void OnTriggerEnter(Collider col)
     {
+         isAttack = true;
+
         if (col.gameObject.name == "Player")
         {
             anim.SetBool("Attack", true);
         }
+    
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        isAttack = false;
+    }
+    void Attack()
+    {
+        if(fireBallCount < 1)
+        {
+            GameObject fireball = (GameObject)Instantiate(fireBall, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            fireBallCount++;
+        }
+
     }
     void takehit()
     {

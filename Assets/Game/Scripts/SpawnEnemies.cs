@@ -22,23 +22,27 @@ public class SpawnEnemies : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        if(this.gameObject.name == "SpawnPointTrigger1")
+        if(col.gameObject.name == "Player")
         {
-            GameObject goBombMan = (GameObject)Instantiate(BombMan, BombManSpawnPoint.transform.position, BombManSpawnPoint.transform.rotation);
-            goBombMan.GetComponent<BombMan_Script>().goal = followPlayer.transform;
+            if (this.gameObject.name == "SpawnPointTrigger1")
+            {
+                GameObject goBombMan = (GameObject)Instantiate(BombMan, BombManSpawnPoint.transform.position, BombManSpawnPoint.transform.rotation);
+                goBombMan.GetComponent<BombMan_Script>().goal = followPlayer.transform;
+            }
+            if (this.gameObject.name == "SpawnPointTrigger2")
+            {
+                GameObject goFiery = (GameObject)Instantiate(Fiery, FierySpawnPoint.transform.position, FierySpawnPoint.transform.rotation);
+                goFiery.GetComponent<FieryEnemy_Script>().goal = followPlayer.transform;
+            }
+            if (this.gameObject.name == "SpawnPointTriggerDragon")
+            {
+                GameObject goFiery = (GameObject)Instantiate(Fiery, FierySpawnPoint.transform.position, FierySpawnPoint.transform.rotation);
+                goFiery.GetComponent<Dragon_Move>().goal = followPlayer.transform;
+            }
         }
-        if (this.gameObject.name == "SpawnPointTrigger2")
-        {
-            GameObject goFiery = (GameObject)Instantiate(Fiery, FierySpawnPoint.transform.position, FierySpawnPoint.transform.rotation);
-            goFiery.GetComponent<FieryEnemy_Script>().goal = followPlayer.transform;
-        }
-        if (this.gameObject.name == "SpawnPointTriggerDragon")
-        {
-            GameObject goFiery = (GameObject)Instantiate(Fiery, FierySpawnPoint.transform.position, FierySpawnPoint.transform.rotation);
-            goFiery.GetComponent<Dragon_Move>().goal = followPlayer.transform;
-        }
+
   
     }
 }
