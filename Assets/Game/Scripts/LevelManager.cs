@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetButton("Jump"))
+        if(Input.GetButtonUp("pause"))
         {
             if(isPressed != true)
             {
@@ -81,7 +81,7 @@ public class LevelManager : MonoBehaviour
         else if (val == 0)
         {
             Time.timeScale = 1;
-            pausePanel.SetActive(true);
+            pausePanel.SetActive(false);
         }
     }
 

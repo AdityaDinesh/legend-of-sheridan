@@ -3411,6 +3411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SplineDemo
       objectReference: {fileID: 0}
+    - target: {fileID: 538461153464585175, guid: f817dba89379b6b44a9b5f8fda20816d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 538461153249325779, guid: f817dba89379b6b44a9b5f8fda20816d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3502,11 +3507,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 538461152862562200, guid: f817dba89379b6b44a9b5f8fda20816d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 538461153464585175, guid: f817dba89379b6b44a9b5f8fda20816d,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3688,6 +3688,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490951322136190017, guid: 117a1f45fb3cb8e40b61505a913fad09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490951322136190017, guid: 117a1f45fb3cb8e40b61505a913fad09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490951322136190017, guid: 117a1f45fb3cb8e40b61505a913fad09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117a1f45fb3cb8e40b61505a913fad09, type: 3}
