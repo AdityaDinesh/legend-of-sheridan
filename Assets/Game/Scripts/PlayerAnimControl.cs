@@ -25,6 +25,14 @@ public class PlayerAnimControl : MonoBehaviour
         // Set the horizontal and vertical values in the animator
         playerAnim.SetFloat("H", x);
         playerAnim.SetFloat("V", y);
+
+        // Attack
+        if(Input.GetButtonDown("Fire3"))
+        {
+            playerAnim.SetTrigger("attack");
+        }
+
+        
     }
 
     void grabObject()
