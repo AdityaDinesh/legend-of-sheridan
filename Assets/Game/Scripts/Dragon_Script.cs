@@ -57,6 +57,8 @@ public class Dragon_Script : MonoBehaviour
         if(fireBallCount < 1)
         {
             GameObject fireball = (GameObject)Instantiate(fireBall, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            fireball.gameObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0,0,500));
+            fireball.gameObject.GetComponent<Rigidbody>().AddRelativeForce(this.transform.up * -80);
             fireBallCount++;
         }
 

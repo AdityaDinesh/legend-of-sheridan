@@ -14,7 +14,7 @@ public class Fireball_Script : MonoBehaviour
     void Update()
     {
         this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * 8);
-        this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(transform.up * -10);
+        this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(transform.up * -50);
 
     }
     private void OnCollisionEnter(Collision collision)
