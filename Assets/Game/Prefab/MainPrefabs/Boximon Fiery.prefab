@@ -882,9 +882,10 @@ GameObject:
   - component: {fileID: -8099110948776388697}
   - component: {fileID: -8242700713432223143}
   - component: {fileID: 1205203485513846785}
+  - component: {fileID: 8981558916233859905}
   m_Layer: 0
   m_Name: Boximon Fiery
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,9 +945,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 6846396779293421969}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Radius: 0.29
+  m_Speed: 1.5
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -970,6 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 1573367224659594902, guid: 6cc3af0c2ad527549a90ef27bdb0ab75, type: 3}
+  hitPoints: 2
 --- !u!65 &-8242700713432223143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -981,8 +983,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.71, y: 1.72, z: 1.31}
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Size: {x: 1.4, y: 1.4, z: 1.4}
+  m_Center: {x: 0, y: 0.53, z: 0}
 --- !u!54 &1205203485513846785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -999,6 +1001,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &8981558916233859905
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846396779293421969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38
+  m_Height: 1.73
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!1 &6846414787466246807
 GameObject:
   m_ObjectHideFlags: 0

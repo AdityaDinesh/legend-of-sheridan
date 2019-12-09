@@ -32,12 +32,23 @@ public class PlayerAnimControl : MonoBehaviour
             playerAnim.SetTrigger("attack");
         }
 
-        
+        if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+        {
+            playerAnim.SetBool("death", false);
+        }
     }
 
     void grabObject()
     {
         GetComponent<Animator>().SetBool("pickedUp", true);
         GetComponent<IKControl>().ikActive = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            playerAnim.SetBool("death", true);
+        }
     }
 }
