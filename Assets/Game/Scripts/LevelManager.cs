@@ -9,13 +9,19 @@ public class LevelManager : MonoBehaviour
     public Button button;
     public GameObject pausePanel;
     public GameObject healthPanel;
+    public GameObject H1;
+    public GameObject H2;
+    public GameObject H3;
+
+
+    public GameObject Key;
+
     bool isPressed = false;
 
     private void Awake()
     {
         //pausePanel = GameObject.Find("Pause");
-        //healthPanel = GameObject.Find("Health");
-
+       // Player = GameObject.Find("Player");
     }
 
     public void Update()
@@ -82,6 +88,42 @@ public class LevelManager : MonoBehaviour
         {
             Time.timeScale = 1;
             pausePanel.SetActive(false);
+        }
+    }
+
+    void changeHealth(int hitPoints)
+    {
+        if (hitPoints == 3)
+        {
+            H1.gameObject.SetActive(true);
+            H2.gameObject.SetActive(true);
+            H3.gameObject.SetActive(true);
+
+        }
+        else if (hitPoints == 2)
+        {
+            H1.gameObject.SetActive(true);
+            H2.gameObject.SetActive(true);
+            H3.gameObject.SetActive(false);
+
+        }
+        else if (hitPoints == 1)
+        {
+            H1.gameObject.SetActive(true);
+            H2.gameObject.SetActive(false);
+            H3.gameObject.SetActive(false);
+        }
+    }
+
+    void setKey (bool hasKey)
+    {
+        if(hasKey == true)
+        {
+            Key.SetActive(true);
+        }
+        else
+        {
+            Key.SetActive(false);
         }
     }
 
