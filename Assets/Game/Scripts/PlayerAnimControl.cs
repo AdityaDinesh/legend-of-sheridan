@@ -16,7 +16,7 @@ public class PlayerAnimControl : MonoBehaviour
     void Update()
     {
         // Skybox Rotator
-        RenderSettings.skybox.SetFloat("_Rotation", Time.time * -0.4f);
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * 1.0f);
 
         // Get horizontal and vertical inputs
         x = Input.GetAxis("Horizontal");
@@ -25,5 +25,30 @@ public class PlayerAnimControl : MonoBehaviour
         // Set the horizontal and vertical values in the animator
         playerAnim.SetFloat("H", x);
         playerAnim.SetFloat("V", y);
+
+        // Attack
+        if(Input.GetButtonDown("Fire3"))
+        {
+            playerAnim.SetTrigger("attack");
+        }
+
+        if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+        {
+            playerAnim.SetBool("death", false);
+        }
+    }
+
+    void grabObject()
+    {
+        GetComponent<Animator>().SetBool("pickedUp", true);
+        GetComponent<IKControl>().ikActive = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            playerAnim.SetBool("death", true);
+        }
     }
 }
