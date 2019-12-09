@@ -68,6 +68,7 @@ public class Door_Script : MonoBehaviour
             this.GetComponent<Collider>().enabled = false;
             col.transform.position = playerPos.transform.position;
             col.transform.rotation = playerPos.transform.rotation;
+            //col.GetComponent<playerScript>().hasKey = false;
 
             Transform[] doorChildren = col.GetComponentsInChildren<Transform>();
 
