@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: ca6ecd2e0e93a9b46b4b823664ff322b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Negotiate
+  fontNames:
+  - Negotiate
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0c00e3f5b5fd735448e099930e7a4efa, type: 3}
+  - {fileID: 12800000, guid: 2e62831f65b782a49b69a331c4422b39, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
