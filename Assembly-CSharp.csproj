@@ -67,20 +67,22 @@
     <Compile Include="Assets\Game\Scripts\BombMan_Script.cs" />
     <Compile Include="Assets\Game\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Game\Scripts\ChangeLevel.cs" />
+    <Compile Include="Assets\Game\Scripts\Door_Script.cs" />
     <Compile Include="Assets\Game\Scripts\Dragon_Move.cs" />
     <Compile Include="Assets\Game\Scripts\Dragon_Script.cs" />
     <Compile Include="Assets\Game\Scripts\FieryEnemy_Script.cs" />
     <Compile Include="Assets\Game\Scripts\Fireball_Script.cs" />
     <Compile Include="Assets\Game\Scripts\IKControl.cs" />
+    <Compile Include="Assets\Game\Scripts\Key_Script.cs" />
+    <Compile Include="Assets\Game\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Game\Scripts\make_Transparent_script.cs" />
     <Compile Include="Assets\Game\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Game\Scripts\PickupObject.cs" />
     <Compile Include="Assets\Game\Scripts\PlayerAnimControl.cs" />
     <Compile Include="Assets\Game\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Game\Scripts\SplineMgrShell.cs" />
     <Compile Include="Assets\Game\Scripts\Treasure_Chest_script.cs" />
-    <Compile Include="Assets\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
-    <Compile Include="Assets\GE Common Assets\Scripts\GE_UIResponder.cs" />
-    <Compile Include="Assets\PickupObject.cs" />
+    <Compile Include="Assets\Game\Sound\Retro Sound Effects\Demo\Demo.cs" />
     <Compile Include="Assets\SkyBox Volume 2\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
     <Compile Include="Assets\SkyBox Volume 2\GE Common Assets\Scripts\GE_UIResponder.cs" />
     <None Include="Assets\Game\Prefab\Enemy\BombMan\etc\MatCap.shader" />
@@ -90,42 +92,44 @@
     <None Include="Assets\Game\Prefab\Key\Models\Key\readME keys.txt" />
     <None Include="Assets\Game\Prefab\Weapon\GreatswordofFrozenNight\SpecLightDiffuse.shader" />
     <None Include="Assets\Game\Textures\Projectile\ErbGameArt\Procedural fire\Demo scene\Readme.txt" />
+    <None Include="Assets\Game\Sound\Monster SFX - 111518\Notes.txt" />
+    <None Include="Assets\Game\Textures\Skybox\SkyBox Volume 2\GE Common Assets\Readme.txt" />
     <None Include="Assets\SkyBox Volume 2\GE Common Assets\Readme.txt" />
     <None Include="Assets\Game\Prefab\Weapon\Medieval Sword\read me.txt" />
     <None Include="Assets\Game\Prefab\Enemy\LittleFlyingDragon\Micro-Dragon-Fino\Animations\_micro_dragon_animations.txt" />
     <None Include="Assets\Game\Prefab\Level\Cartoon Temple Building Kit\ReadMe.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Unity/Legend of Sheridan/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/UnityProjects/Legend of Sheridan/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
