@@ -21,30 +21,11 @@ public class FieryEnemy_Script : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
         Attack();
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Die") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Weapon"))
-        {
-            anim.SetBool("Die", true);
-            this.GetComponent<CapsuleCollider>().enabled = false;
-        }
     }
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Weapon"))
-        {
-            anim.SetBool("Die", true);
-        }
-
-        if (col.gameObject.name == "Player")
+        if(col.gameObject.name == "Player")
         {
             anim.SetBool("PrimaryAttack", true);
         }
@@ -66,9 +47,13 @@ public class FieryEnemy_Script : MonoBehaviour
     void Attack()
     {
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("PrimaryAttack") || anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("PrimaryAttack"))
         {
             goal = this.gameObject.transform;
+        }
+        else
+        {
+            goal = GameObject.Find("Player").transform;
         }
     }
 
