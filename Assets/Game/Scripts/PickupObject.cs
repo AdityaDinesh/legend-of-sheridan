@@ -8,9 +8,30 @@ public class PickupObject : MonoBehaviour
     public Transform playerLHandHandle;
     public Transform playerRHandHandle;
     public Transform playerRightHand;
+    bool isPlaying = false;
+    GameObject player = null;
+    
 
 
-    GameObject player;
+    private void Update()
+    {
+        if (player != null)
+        {
+            if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack") && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.3f)
+            {
+                // audioSrc = this.GetComponent<AudioSource>();
+                if (!this.GetComponent<AudioSource>().isPlaying && !isPlaying)
+                {
+                    isPlaying = true;
+                    this.GetComponent<AudioSource>().Play();
+                }
+                else
+                {
+                    isPlaying = false;
+                }
+            }
+        }
+    }
 
 
     private void OnTriggerStay(Collider other)

@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class Fireball_Script : MonoBehaviour
 {
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
+        this.gameObject.GetComponent<Rigidbody>().AddForce((player.transform.position - this.transform.position) * 75);
+       ///GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * 8);
-        this.gameObject.GetComponent<Rigidbody>().AddRelativeForce(transform.up * -10);
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name == "Player")
-        {
 
-        }
-        else
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name == "Player")
         {
             Destroy(this.gameObject);
         }
+        else
+        {
+            Destroy(this.gameObject , 2.0f);
+        }
     }
+
 }

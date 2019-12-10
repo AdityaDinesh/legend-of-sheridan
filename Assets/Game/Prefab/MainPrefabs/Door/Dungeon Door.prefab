@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 243110093749354445}
   - component: {fileID: 243110093749354444}
   - component: {fileID: 243110093749354447}
+  - component: {fileID: 6355014911788186079}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -58,6 +59,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: f8d1a06a25a3c9c4a98eab777d2a1283, type: 3}
+--- !u!82 &6355014911788186079
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243110093749354442}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 35fbad8cdde724f11ba6481f1e64af71, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 142
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &243110093928652087
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +290,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 243110095150811825}
     m_Modifications:
+    - target: {fileID: 1000012117707472, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
+      propertyPath: m_Name
+      value: Block 1x5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013675817666, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5369806
@@ -249,10 +350,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.27414
       objectReference: {fileID: 0}
-    - target: {fileID: 1000012117707472, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
-      propertyPath: m_Name
-      value: Block 1x5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
 --- !u!4 &239120321374778781 stripped
@@ -268,6 +365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 243110095150811825}
     m_Modifications:
+    - target: {fileID: 1000010127456080, guid: ad89cac77079e92488853ed3e7591455, type: 3}
+      propertyPath: m_Name
+      value: Sig Sag  Pyramid
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013849398142, guid: ad89cac77079e92488853ed3e7591455, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.428981
@@ -324,10 +425,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.34080508
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010127456080, guid: ad89cac77079e92488853ed3e7591455, type: 3}
-      propertyPath: m_Name
-      value: Sig Sag  Pyramid
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad89cac77079e92488853ed3e7591455, type: 3}
 --- !u!4 &239120321891511892 stripped
@@ -343,6 +440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 243110095150811825}
     m_Modifications:
+    - target: {fileID: 1000012117707472, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
+      propertyPath: m_Name
+      value: Block 1x5 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013675817666, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2609806
@@ -398,10 +499,6 @@ PrefabInstance:
     - target: {fileID: 4000013675817666, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.27414
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000012117707472, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}
-      propertyPath: m_Name
-      value: Block 1x5 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36407ad5ee1f4da4e8e9c83a83f2eec8, type: 3}

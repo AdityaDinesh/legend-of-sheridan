@@ -4,6 +4,8 @@ using UnityEngine.AI;
 public class BombMan_Script : MonoBehaviour
 {
     public Transform goal;
+    AudioSource audioSrc;
+    bool isPlaying = false;
     [SerializeField]
     int hitPoints = 2;
     Animator anim;
@@ -27,6 +29,16 @@ public class BombMan_Script : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.3f)
+        {
+            audioSrc = this.GetComponent<AudioSource>();
+            if(!audioSrc.isPlaying && !isPlaying)
+            {
+                isPlaying = true;
+                audioSrc.Play();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider col)
@@ -34,12 +46,15 @@ public class BombMan_Script : MonoBehaviour
         if (col.gameObject.CompareTag("Weapon"))
         {
             takehit();
+
         }
 
         if (col.gameObject.name == "Player")
         {
             anim.SetBool("Attack", true);
         }
+
+       
     }
 
     void Attack()
@@ -49,6 +64,7 @@ public class BombMan_Script : MonoBehaviour
         {
             goal = this.gameObject.transform;
         }
+
         //else
         //{
         //    goal = GameObject.Find("Player").transform;

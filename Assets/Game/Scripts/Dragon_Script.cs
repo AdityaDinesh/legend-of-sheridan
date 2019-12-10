@@ -28,30 +28,36 @@ public class Dragon_Script : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            Attack(); 
+            Attack();
         }
         else
         {
             fireBallCount = 0;
         }
-
-        
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-         isAttack = true;
+    //private void OnTriggerEnter(Collider col)
+    //{
+    //    //isAttack = true;
+    //    if (col.gameObject.name == "Player")
+    //    {
+    //        anim.SetBool("Attack", true);
+    //    }
 
+    //}
+    private void OnTriggerStay(Collider col)
+    {
         if (col.gameObject.name == "Player")
         {
             anim.SetBool("Attack", true);
         }
-    
     }
     private void OnTriggerExit(Collider other)
     {
-        isAttack = false;
+        anim.SetBool("Attack", false);
+        // isAttack = false;
     }
+
     void Attack()
     {
         if(fireBallCount < 1)
@@ -59,7 +65,6 @@ public class Dragon_Script : MonoBehaviour
             GameObject fireball = (GameObject)Instantiate(fireBall, this.gameObject.transform.position, this.gameObject.transform.rotation);
             fireBallCount++;
         }
-
     }
     void takehit()
     {

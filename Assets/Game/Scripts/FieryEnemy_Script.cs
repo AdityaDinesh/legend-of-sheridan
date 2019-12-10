@@ -4,6 +4,13 @@ using UnityEngine.AI;
 public class FieryEnemy_Script : MonoBehaviour
 {
     public Transform goal;
+    bool isAttack = false;
+    bool isDead = false;
+    AudioSource audioSrc;
+    [SerializeField]
+    AudioClip attack;
+    [SerializeField]
+    AudioClip Die;
     [SerializeField]
     int hitPoints = 2;
     Animator anim;
@@ -25,6 +32,34 @@ public class FieryEnemy_Script : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Die") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
         {
             Destroy(this.gameObject);
+        }
+
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("PrimaryAttack") && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.01f)
+        {
+            audioSrc = this.GetComponent<AudioSource>();
+            if (!audioSrc.isPlaying && !isAttack)
+            {
+                isAttack = true;
+                audioSrc.clip = attack;
+                audioSrc.Play();
+            }
+            else if (audioSrc.isPlaying && isAttack)
+            {
+                isAttack = false;
+            }
+        }
+
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
+        {
+            audioSrc = this.GetComponent<AudioSource>();
+            if (!audioSrc.isPlaying && !isDead)
+            {
+                isDead = true;
+                audioSrc.clip = Die;
+                audioSrc.Play();
+            }
         }
     }
 

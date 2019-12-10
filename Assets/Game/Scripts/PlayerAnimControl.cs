@@ -7,6 +7,8 @@ public class PlayerAnimControl : MonoBehaviour
     Animator playerAnim;                        // Player Animator
     float x = 0;                                // Horizontal inputs for the Player from the User
     float y = 0;                                // Vertical inputs for the Player from the User
+
+    public bool hasKey = false;
     void Start()
     {
         playerAnim = this.GetComponent<Animator>();
