@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimControl : MonoBehaviour
 {
@@ -77,6 +78,11 @@ public class PlayerAnimControl : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             playerAnim.SetBool("death", true);
+        }
+
+        if(collision.gameObject.name == "DeathObject")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickupObject : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class PickupObject : MonoBehaviour
     {
         if (player != null && !player.CompareTag("Weapon"))
         {
-            if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack") && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.3f)
+            if (player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack") && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5f)
             {
                 // audioSrc = this.GetComponent<AudioSource>();
                 if (!this.GetComponent<AudioSource>().isPlaying && !isPlaying)
@@ -32,23 +33,19 @@ public class PickupObject : MonoBehaviour
                     isPlaying = true;
                     this.GetComponent<AudioSource>().Play();
                 }
-                else
-                {
-                    isPlaying = false;
-                }
             }
 
-            if(player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Shoot") && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f)
+            else if(player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Shoot") && player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f)
             {
                 if (!this.GetComponent<AudioSource>().isPlaying && !isPlaying)
                 {
                     isPlaying = true;
-                    this.GetComponent<AudioSource>().Play();
+                    this.GetComponent<AudioSource>().PlayOneShot(this.GetComponent<AudioSource>().clip);
                 }
-                else
-                {
-                    isPlaying = false;
-                }
+            }
+            else
+            {
+                isPlaying = false;
             }
         }
 
