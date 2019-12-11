@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     public GameObject H2;
     public GameObject H3;
 
+    public GameObject player;
 
     public GameObject Key;
 
@@ -40,6 +41,10 @@ public class LevelManager : MonoBehaviour
 
             }
 
+        }
+       if(player != null)
+        {
+            changeHealth(player.GetComponent<PlayerAnimControl>().hitPoints);
         }
     }
     private void Start()
@@ -93,25 +98,35 @@ public class LevelManager : MonoBehaviour
 
     void changeHealth(int hitPoints)
     {
-        if (hitPoints == 3)
+        if (H1 != null && H2 != null && H3 != null && Key != null && player != null && pausePanel != null && healthPanel != null)
         {
-            H1.gameObject.SetActive(true);
-            H2.gameObject.SetActive(true);
-            H3.gameObject.SetActive(true);
+            if (hitPoints == 3)
+            {
+                H1.gameObject.SetActive(true);
+                H2.gameObject.SetActive(true);
+                H3.gameObject.SetActive(true);
 
-        }
-        else if (hitPoints == 2)
-        {
-            H1.gameObject.SetActive(true);
-            H2.gameObject.SetActive(true);
-            H3.gameObject.SetActive(false);
+            }
+            else if (hitPoints == 2)
+            {
+                H1.gameObject.SetActive(true);
+                H2.gameObject.SetActive(true);
+                H3.gameObject.SetActive(false);
 
-        }
-        else if (hitPoints == 1)
-        {
-            H1.gameObject.SetActive(true);
-            H2.gameObject.SetActive(false);
-            H3.gameObject.SetActive(false);
+            }
+            else if (hitPoints == 1)
+            {
+                H1.gameObject.SetActive(true);
+                H2.gameObject.SetActive(false);
+                H3.gameObject.SetActive(false);
+            }
+            else if (hitPoints == 0)
+            {
+                H1.gameObject.SetActive(false);
+                H2.gameObject.SetActive(false);
+                H3.gameObject.SetActive(false);
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 

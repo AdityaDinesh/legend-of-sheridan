@@ -11,6 +11,8 @@ public class PlayerAnimControl : MonoBehaviour
     float x = 0;                                // Horizontal inputs for the Player from the User
     float y = 0;                                // Vertical inputs for the Player from the User
 
+    public int hitPoints;
+
     public bool hasKey = false;
     void Start()
     {
@@ -38,7 +40,7 @@ public class PlayerAnimControl : MonoBehaviour
         }
 
         // Shoot
-        if(Input.GetButtonDown("Fire2") && playerAnim.GetBool("pickedUp"))
+        if(Input.GetButtonDown("Fire2") && playerAnim.GetBool("pickedUp") && arrowhandle != null)
         {
             playerAnim.SetTrigger("shoot");
         }

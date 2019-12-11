@@ -49,9 +49,8 @@ public class PickupObject : MonoBehaviour
             }
         }
 
-        if(Input.GetButtonUp("Jump"))
+        if(Input.GetButtonUp("Jump") && isEquipped)
         {
-            
             player.GetComponent<IKControl>().rightHandObj = null;
             player.GetComponent<IKControl>().leftHandObj = null;
             isEquipped = false;
@@ -60,7 +59,7 @@ public class PickupObject : MonoBehaviour
             this.transform.rotation = rotation;
         }
 
-        Debug.Log(position);
+        //Debug.Log(position);
 
     }
 

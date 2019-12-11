@@ -82,11 +82,15 @@ public class FieryEnemy_Script : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             anim.SetBool("PrimaryAttack", true);
+            if (!col.GetComponent<Animator>().GetNextAnimatorStateInfo(0).IsName("Die"))
+            {
+                col.gameObject.GetComponent<PlayerAnimControl>().hitPoints--;
+            }
         }
 
-        if(col.gameObject.name == "EnemyWeapon")
+        if (col.gameObject.name == "EnemyWeapon")
         {
-            pickWeapon(col);
+               pickWeapon(col);
         }
     }
     private void OnTriggerExit(Collider col)
@@ -103,7 +107,7 @@ public class FieryEnemy_Script : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("PrimaryAttack") || anim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
         {
-            goal = this.gameObject.transform;
+          //  goal = this.gameObject.transform;
         }
     }
 
@@ -132,9 +136,8 @@ public class FieryEnemy_Script : MonoBehaviour
                 col.gameObject.transform.position = child.gameObject.transform.position;
                 col.gameObject.transform.rotation = child.gameObject.transform.rotation;
             }
-
         }
-        col.gameObject.GetComponent<Collider>().enabled = false;
+        col.gameObject.GetComponent<BoxCollider>().enabled = false;
     }
        
 }

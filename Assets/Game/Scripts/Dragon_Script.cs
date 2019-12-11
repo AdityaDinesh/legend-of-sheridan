@@ -11,12 +11,16 @@ public class Dragon_Script : MonoBehaviour
     Animator anim;
     [SerializeField]
     GameObject fireBall;
+    [SerializeField]
+    GameObject player;
     bool isAttack = false;
     int fireBallCount = 0;
 
     private void Awake()
     {
         anim = this.gameObject.GetComponent<Animator>();
+        player = GameObject.Find("Player");
+
         //fireBall = GameObject.Find("FireBall");
     }
     private void Start()
@@ -26,15 +30,26 @@ public class Dragon_Script : MonoBehaviour
     void Update()
     {
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Die"))
         {
             Attack();
+
         }
         else
         {
             fireBallCount = 0;
         }
+
+  
+
+                
     }
+
+    //IEnumerator fireBalldelay()
+    //{
+    //   // yield return new WaitForSeconds(5);
+
+    //}
 
     //private void OnTriggerEnter(Collider col)
     //{

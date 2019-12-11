@@ -24,6 +24,9 @@ public class Fireball_Script : MonoBehaviour
         if (col.gameObject.name == "Player")
         {
             Destroy(this.gameObject);
+            col.GetComponent<Animator>().SetBool("death", true);
+            col.GetComponent<PlayerAnimControl>().hitPoints--;
+
         }
         else
         {
