@@ -8406,10 +8406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1000011717122646, guid: b53f6f2fb4ee6ce459481fcf3fe082dd, type: 3}
-      propertyPath: m_Name
-      value: Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010969535252, guid: b53f6f2fb4ee6ce459481fcf3fe082dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.47
@@ -8465,6 +8461,10 @@ PrefabInstance:
     - target: {fileID: 4000010969535252, guid: b53f6f2fb4ee6ce459481fcf3fe082dd, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.7967
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011717122646, guid: b53f6f2fb4ee6ce459481fcf3fe082dd, type: 3}
+      propertyPath: m_Name
+      value: Arrow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53f6f2fb4ee6ce459481fcf3fe082dd, type: 3}
@@ -10665,6 +10665,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab,
         type: 3}
+    - target: {fileID: 243110093749354447, guid: f42b0db456a8c2741ba5bd5fb0202800,
+        type: 3}
+      propertyPath: scene.m_Handle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3070441564188263821, guid: f42b0db456a8c2741ba5bd5fb0202800,
         type: 3}
       propertyPath: frames.Array.size

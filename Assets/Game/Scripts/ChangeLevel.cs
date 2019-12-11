@@ -10,7 +10,7 @@ public class ChangeLevel : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Player")
+        if(collision.gameObject.name == "Player" && scene != null)
         {
             this.GetComponent<AudioSource>().Play();
             SceneManager.LoadScene(scene.name);
