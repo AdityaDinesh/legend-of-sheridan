@@ -8,19 +8,29 @@ public class Dragon_Move : MonoBehaviour
     public Transform goal;
     [SerializeField]
     int hitPoints = 2;
-    Animator anim;
+    public Animator anim;
 
-    private void Awake()
-    {
-      //  anim = this.gameObject.GetComponent<Animator>();
-    }
-    private void Start()
-    {
-       // anim.SetBool("Walk", true);
-    }
     void Update()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Weapon")
+        {
+            Transform[] child = GetComponentsInChildren<Transform>();
+            foreach (var transform in child)
+            {
+                if(transform.GetComponent<Animator>())
+                {
+                    transform.GetComponent<Animator>().SetBool("Die", true);
+                    this.GetComponent<AudioSource>().Play();
+                    Destroy(this.gameObject, 1);
+                    break;
+                }
+            }
+        }
     }
 }

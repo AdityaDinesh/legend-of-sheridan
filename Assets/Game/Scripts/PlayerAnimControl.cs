@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAnimControl : MonoBehaviour
 {
+    public GameObject arrowhandle;
+    GameObject arrow;
     Animator playerAnim;                        // Player Animator
     float x = 0;                                // Horizontal inputs for the Player from the User
     float y = 0;                                // Vertical inputs for the Player from the User
@@ -29,11 +31,18 @@ public class PlayerAnimControl : MonoBehaviour
         playerAnim.SetFloat("V", y);
 
         // Attack
-        if(Input.GetButtonDown("Fire3"))
+        if(Input.GetButtonDown("Fire3") && playerAnim.GetBool("pickedUp"))
         {
             playerAnim.SetTrigger("attack");
         }
 
+        // Shoot
+        if(Input.GetButtonDown("Fire2") && playerAnim.GetBool("pickedUp"))
+        {
+            playerAnim.SetTrigger("shoot");
+        }
+
+        // Death
         if(playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Die"))
         {
             playerAnim.SetBool("death", false);
@@ -44,6 +53,23 @@ public class PlayerAnimControl : MonoBehaviour
     {
         GetComponent<Animator>().SetBool("pickedUp", true);
         GetComponent<IKControl>().ikActive = true;
+    }
+
+    void createArrow(GameObject obj)
+    {
+       arrow = Instantiate(obj, arrowhandle.transform.position, arrowhandle.transform.rotation);
+       arrow.transform.SetParent(arrowhandle.transform);
+    }
+
+    void releaseArrow()
+    {
+       arrow.transform.SetParent(null);
+       arrow.GetComponent<Rigidbody>().isKinematic = false;
+       arrow.GetComponent<Rigidbody>().useGravity = true;
+       //arrow.GetComponent<BoxCollider>().enabled = true;
+       arrow.GetComponent<Rigidbody>().AddForce(transform.forward * 3000);
+       arrow.GetComponent<Rigidbody>().AddForce(transform.up * 1000);
+        Destroy(arrow, 1.5f);
     }
 
     private void OnCollisionEnter(Collision collision)

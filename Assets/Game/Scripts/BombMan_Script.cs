@@ -46,7 +46,6 @@ public class BombMan_Script : MonoBehaviour
         if (col.gameObject.CompareTag("Weapon"))
         {
             takehit();
-
         }
 
         if (col.gameObject.name == "Player")

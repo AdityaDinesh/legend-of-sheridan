@@ -40,6 +40,7 @@ public class SpawnEnemies : MonoBehaviour
             {
                 GameObject goFiery = (GameObject)Instantiate(Fiery, FierySpawnPoint.transform.position, FierySpawnPoint.transform.rotation);
                 goFiery.GetComponent<Dragon_Move>().goal = followPlayer.transform;
+                this.GetComponent<BoxCollider>().enabled = false;
             }
         }
 
