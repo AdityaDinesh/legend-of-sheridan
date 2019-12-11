@@ -1137,8 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4ca5052d8cebc44ba6e21becc7fc78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 444015355}
-  Camera: {fileID: 0}
+  target: {fileID: 2076268232}
+  Camera: {fileID: 444015355}
   smoothSpeed: 0.125
   offset: {x: 0, y: 10.9, z: -16.59}
 --- !u!1001 &468131403
@@ -3668,6 +3668,12 @@ MonoBehaviour:
   rightHandObj: {fileID: 0}
   leftHandObj: {fileID: 0}
   lookObj: {fileID: 0}
+--- !u!4 &2076268232 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1573367224659594902, guid: 6cc3af0c2ad527549a90ef27bdb0ab75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1746416542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2081943500
 GameObject:
   m_ObjectHideFlags: 0

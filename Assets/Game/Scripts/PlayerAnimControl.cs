@@ -48,6 +48,7 @@ public class PlayerAnimControl : MonoBehaviour
         {
             playerAnim.SetBool("death", false);
         }
+
     }
 
     void grabObject()
