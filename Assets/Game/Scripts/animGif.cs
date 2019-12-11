@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class animGif : MonoBehaviour
 {
+    // Animates the pixel sprite
+
     [SerializeField] private Texture2D[] frames;
     [SerializeField] private float fps = 10.0f;
 
